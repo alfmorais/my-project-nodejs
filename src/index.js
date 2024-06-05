@@ -6,6 +6,9 @@ app.get("/", function (request, response) {
 })
 
 app.get("/projects", function (request, response) {
+    const {title, owner, page} = request.query
+    console.log(title, owner, page)
+
     return response.json([
         "Projeto 1",
         "Projeto 2",
